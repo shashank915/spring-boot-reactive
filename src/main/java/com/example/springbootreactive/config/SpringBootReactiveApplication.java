@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.example.springbootreactive")
 @EntityScan(basePackages = "com.example.springbootreactive")
+@ComponentScan(basePackages = "com.example.springbootreactive")
 @EnableReactiveMongoRepositories(basePackages = "com.example.springbootreactive")
 public class SpringBootReactiveApplication {
 

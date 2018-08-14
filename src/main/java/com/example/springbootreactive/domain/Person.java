@@ -3,6 +3,8 @@ package com.example.springbootreactive.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.UUID;
@@ -13,7 +15,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @Document
 public class Person {
-    private String personId = UUID.randomUUID().toString();
+
+    @Id
+    private ObjectId personId;
     private String personName;
     private int personAge;
 }
