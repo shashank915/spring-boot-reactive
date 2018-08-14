@@ -13,8 +13,8 @@ public class TreeStructureTest {
     @Test
     public void test(){
 
-        List<String> sourceStrings = Arrays.asList("CSE/","CSE/DS","CSE/DS/Images","CSE/DS/Images/a.jpg",
-                "CSE/DS/Videos","CSE/DS/Videos/a.mp4","CSE/DBMS","CSE/DBMS/Images","CSE/DBMS/Videos"
+        List<String> sourceStrings = Arrays.asList("CSE/","CSE/DS/","CSE/DS/Images/","CSE/DS/Images/a.jpg",
+                "CSE/DS/Videos/","CSE/DS/Videos/a.mp4","CSE/DBMS/","CSE/DBMS/Images/","CSE/DBMS/Videos/"
         ,"CSE/DBMS/Images/a.jpg","CSE/DBMS/Videos/a.mp4");
 
         System.out.println(NodeBuilder.buildNode(sourceStrings));

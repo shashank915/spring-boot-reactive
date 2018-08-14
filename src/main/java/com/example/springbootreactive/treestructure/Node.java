@@ -33,17 +33,18 @@ public class Node{
         }
         this.data = data;
 
-        if(predecessors != null) {
+        if(predecessors .size() != 0) {
             //retrieveing children
             this.children = findChildren(findPredessors(this.data,predecessors));
         }
-        System.out.println(this);
+        System.out.println("-----------> Node created :: " + this.data);
+        //System.out.println(this);
     }
 
     private List<Node> findChildren(List<String> predecessors){
 
          return predecessors.stream().filter(x-> !x.equals(this.data) && x.startsWith(this.data))
-                .map(y-> new Node(this,y,predecessors))
+                .map(y-> new Node(this,y,findPredessors(y,predecessors)))
                 .collect(Collectors.toList());
     }
 
